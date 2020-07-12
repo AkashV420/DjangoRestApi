@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Index</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}"/>
+</head>
+<body>
+  <center>
+<form method="POST" class="post-form" action="/update/{{employee.id}}">
+        {% csrf_token %}
+    <div class="container">
+<br>
+    <div class="form-group row">
+    <label class="col-sm-1 col-form-label"></label>
+    <div class="col-sm-4">
+    <h1>Update Details</h1>
+    <br>
+    <br>
+    </div>
+  </div>
+
+    <div class="form-group row">
+    <label class="col-sm-2 col-form-label">Invoice Id:</label>
+    <div class="col-sm-4">
+        <input type="text" name="eid" id="id_eid" required maxlength="20" value="{{ employee.eid }}"/>
+    </div>
+  </div>
+  <div class="form-group row">
+    <label class="col-sm-2 col-form-label">Branch:</label>
+    <div class="col-sm-4">
+        <input type="text" name="Branch" id="id_branch" required maxlength="20" value="{{ employee.branch }}" />
+    </div>
+  </div>
+    <div class="form-group row">
+    <label class="col-sm-2 col-form-label">City:</label>
+    <div class="col-sm-4">
+        <input type="text" name="City" id="id_city" required maxlength="25" value="{{ employee.city }}" />
+    </div>
+  </div>
+    <div class="form-group row">
+    <label class="col-sm-2 col-form-label">Customer type:</label>
+    <div class="col-sm-4">
+        <input type="text" name="Customer_type" id="id_ctype" required maxlength="15" value="{{ employee.customer_type }}" />
+    </div>
+  </div>
+
+  <div class="form-group row">
+  <label class="col-sm-2 col-form-label">Gender:</label>
+  <div class="col-sm-4">
+      <input type="text" name="Gender" id="id_gender" required maxlength="10" value="{{ employee.gender }}"/>
+  </div>
+</div>
+<div class="form-group row">
+  <label class="col-sm-2 col-form-label">Product line:</label>
+  <div class="col-sm-4">
+      <input type="text" name="Product_line" id="id_pline" required maxlength="50" value="{{ employee.product_line }}" />
+  </div>
+</div>
+  <div class="form-group row">
+  <label class="col-sm-2 col-form-label">Unit price:</label>
+  <div class="col-sm-4">
+      <input type="text" name="Unit_price" id="id_uprice" required maxlength="10" value="{{ employee.unit_price }}" />
+  </div>
+</div>
+  <div class="form-group row">
+  <label class="col-sm-2 col-form-label">Quantity:</label>
+  <div class="col-sm-4">
+      <input type="text" name="Quantity" id="id_quantity" required maxlength="15" value="{{ employee.quantity }}" />
+  </div>
+</div>
+
+<div class="form-group row">
+<label class="col-sm-2 col-form-label">Tax:</label>
+<div class="col-sm-4">
+    <input type="text" name="Tax" id="id_tax" required maxlength="20" value="{{ employee.tax }}"/>
+</div>
+</div>
+<div class="form-group row">
+<label class="col-sm-2 col-form-label">Total:</label>
+<div class="col-sm-4">
+    <input type="text" name="Total" id="id_total" required maxlength="100" value="{{ employee.total }}" />
+</div>
+</div>
+<div class="form-group row">
+<label class="col-sm-2 col-form-label">Payment Mode:</label>
+<div class="col-sm-4">
+    <input type="text" name="Payment_mode" id="id_pmode" required maxlength="30" value="{{ employee.pmode }}" />
+</div>
+</div>
+<div class="form-group row">
+<label class="col-sm-2 col-form-label">Rating:</label>
+<div class="col-sm-4">
+    <input type="text" name="Rating" id="id_rating" required maxlength="15" value="{{ employee.rating }}" />
+</div>
+</div>
+
+<div class="form-group row">
+<label class="col-sm-1 col-form-label"></label>
+<div class="col-sm-4">
+<button type="submit" class="btn btn-success">Update</button>
+</div>
+</div>
+    </div>
+</form>
+</center>
+</body>
+</html>

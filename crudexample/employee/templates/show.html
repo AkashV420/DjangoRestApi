@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Wholesale Records</title>
+     {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}"/>
+</head>
+<body>
+  <center><h1>WHOLESALE PRODUCT RECORDS</h1></center>
+  <br>
+<center>
+<table class="table table-striped table-bordered table-sm">
+    <thead class="thead-dark">
+      <tr>
+        <th>|Invoice ID|</th>
+        <th>|Branch|</th>
+        <th>|City|</th>
+        <th>|Customer type|</th>
+        <th>|Gender|</th>
+        <th>|Product line|</th>
+        <th>|Unit price|</th>
+        <th>|Quantity|</th>
+        <th>|Tax|</th>
+        <th>|Total|</th>
+        <th>|Payment Mode|</th>
+        <th>|Rating|</th>
+        <th>|Actions|</th>
+    </tr>
+    </thead>
+    <tbody>
+{% for employee in employees %}
+    <tr>
+        <td>| {{ employee.eid }} |</td>
+        <td>| {{ employee.branch }} |</td>
+        <td>| {{ employee.city }} |</td>
+        <td>| {{ employee.customer_type }} |</td>
+        <td>| {{ employee.gender }} |</td>
+        <td>| {{ employee.product_line }} |</td>
+        <td>| {{ employee.unit_price }} |</td>
+        <td>| {{ employee.quantity }} |</td>
+        <td>| {{ employee.tax }} |</td>
+        <td>| {{ employee.total }} |</td>
+        <td>| {{ employee.payment_mode }} |</td>
+        <td>| {{ employee.rating }} |</td>
+        <td>
+            <a href="/edit/{{ employee.id }}"><span class="glyphicon glyphicon-pencil" >Edit</span></a>
+            <a href="/delete/{{ employee.id }}">Delete</a>
+        </td>
+    </tr>
+{% endfor %}
+    </tbody>
+</table>
+<center>
+<br>
+<br>
+<center><a href="/emp" class="btn btn-primary">Add New Record</a></center>
+</body>
+</html>

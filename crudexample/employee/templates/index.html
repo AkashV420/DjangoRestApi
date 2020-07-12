@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Index</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}"/>
+</head>
+<body>
+  <center>
+<form method="POST" class="post-form" action="/emp">
+        {% csrf_token %}
+    <div class="container">
+<br>
+    <div class="form-group row">
+    <label class="col-sm-1 col-form-label"></label>
+    <div class="col-sm-4">
+    <h1>ADD RECORD</h1>
+    <br>
+    <h2><b>Enter-details</b></h2>
+    </div>
+  </div>
+    <div class="form-group row">
+    <label class="col-sm-2 col-form-label">Invoice-ID:</label>
+    <div class="col-sm-4">
+      {{ form.eid }}
+    </div>
+  </div>
+  <div class="form-group row">
+    <label class="col-sm-2 col-form-label">Branch:</label>
+    <div class="col-sm-4">
+      {{ form.branch }}
+    </div>
+  </div>
+    <div class="form-group row">
+    <label class="col-sm-2 col-form-label">City:</label>
+    <div class="col-sm-4">
+      {{ form.city }}
+    </div>
+  </div>
+    <div class="form-group row">
+    <label class="col-sm-2 col-form-label">Customer type:</label>
+    <div class="col-sm-4">
+      {{ form.customer_type }}
+    </div>
+ </div>
+    <div class="form-group row">
+    <label class="col-sm-2 col-form-label">Gender:</label>
+    <div class="col-sm-4">
+      {{ form.gender }}
+    </div>
+  </div>
+  <div class="form-group row">
+  <label class="col-sm-2 col-form-label">Product line:</label>
+  <div class="col-sm-4">
+    {{ form.product_line }}
+  </div>
+</div>
+<div class="form-group row">
+<label class="col-sm-2 col-form-label">Unit price:</label>
+<div class="col-sm-4">
+  {{ form.unit_price }}
+</div>
+</div>
+<div class="form-group row">
+<label class="col-sm-2 col-form-label">Quantity:</label>
+<div class="col-sm-4">
+  {{ form.quantity }}
+</div>
+</div>
+<div class="form-group row">
+<label class="col-sm-2 col-form-label">Tax:</label>
+<div class="col-sm-4">
+  {{ form.tax }}
+</div>
+</div>
+<div class="form-group row">
+<label class="col-sm-2 col-form-label">Total:</label>
+<div class="col-sm-4">
+  {{ form.total }}
+</div>
+</div>
+<div class="form-group row">
+<label class="col-sm-2 col-form-label">Payment Mode:</label>
+<div class="col-sm-4">
+  {{ form.payment_mode }}
+</div>
+</div>
+<div class="form-group row">
+<label class="col-sm-2 col-form-label">Rating:</label>
+<div class="col-sm-4">
+  {{ form.rating }}
+</div>
+</div>
+<div class="form-group row">
+  <label class="col-sm-1 col-form-label"></label>
+  <div class="col-sm-4">
+  <button type="submit" class="btn btn-primary">Submit</button>
+  </div>
+</div>
+  </div>
+</form>
+</center>
+</body>
+</html>
