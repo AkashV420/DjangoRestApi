@@ -26,7 +26,7 @@ Django REST APIs with CRUD Functionality.
 
 * **TASK 2.1** (*Average Product Rating of Each Product line Branch wise*):
   * http://127.0.0.1:8000/AverageProductRating/
-* **Task 2.2  **(*Top 5 highly rated product line city wise*):
-  * http://127.0.0.1:8000/**topfive/**
+* **Task 2.2** (*Top 5 highly rated product line city wise*):
+  * http://127.0.0.1:8000/topfive/*
 * **Task2.3** (*Total Amount Payment mode wise*):
   * http://127.0.0.1:8000/Totalamount/
